@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ item.name }} Details{% endblock %}
+
+{% block content %}
+<h1>{{ item.name }}</h1>
+<p><strong>Description:</strong> {{ item.description }}</p>
+<p><strong>Price:</strong> {{ item.price }} EGP</p>
+
+{% if user.is_superuser %}
+  <a href="{% url 'menu:item-edit' item.id %}" class="btn btn-secondary">Edit</a>
+  <a href="{% url 'menu:item-delete' item.id %}" class="btn btn-danger">Delete</a>
+{% endif %}
+
+<a href="{% url 'menu:item-list' %}" class="btn btn-primary">Back to Menu</a>
+{% endblock %}

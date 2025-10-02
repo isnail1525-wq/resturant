@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Customers{% endblock %}
+{% block content %}
+<h1>Customers</h1>
+<a href="{% url 'customers:customer-add' %}">Add Customer</a>
+<hr>
+{% for c in customers %}
+  <p>
+    <strong>{{ c.name }}</strong> — {{ c.phone }}
+    (<a href="{% url 'customers:customer-detail' c.pk %}">View</a>
+    {% if user.is_superuser %}
+    <a href="{% url 'customers:customer-edit' c.id %}" class="btn btn-secondary">Edit</a>
+    <a href="{% url 'customers:customer-delete' c.id %}" class="btn btn-danger">Delete</a>
+    {% endif %})
+
+  </p>
+{% empty %}
+  <p>No customers found.</p>
+{% endfor %}
+{% endblock %}

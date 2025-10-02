@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Welcome | My Restaurant{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <div>
+    <div class="title">Welcome to My Restaurant</div>
+    <div class="subtitle">Delicious dishes. Fresh ingredients. Warm hospitality.</div>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{% url 'menu:item-list' %}">Explore Menu</a>
+      <a class="btn btn-ghost" href="{% url 'customers:customer-list' %}">View Customers</a>
+    </div>
+
+    <div class="plate" aria-hidden="true">
+      <div class="emoji">🍽️</div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,283 @@
+/* -------------------------
+   🌟 Global Styles
+-------------------------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+/* Container for main content */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Page titles */
+
+h1,
+h2 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+
+/* Text muted */
+
+.muted {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* -------------------------
+   🔹 Navbar
+-------------------------- */
+
+.topbar {
+    background: linear-gradient(90deg, #ffb84d, #ffa31a);
+    color: #fff;
+    padding: 14px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-inner {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+/* -------------------------
+   🟢 Buttons
+-------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    margin: 4px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #b02a37;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #565e64;
+}
+
+
+/* -------------------------
+   🧾 Tables
+-------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #007bff;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+
+/* -------------------------
+   🧠 Forms
+-------------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+
+/* -------------------------
+   🌟 Welcome Hero Section
+-------------------------- */
+
+.hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff6ea 0%, #ffe8c7 40%, #ffd1a8 100%);
+    box-shadow: 0 12px 40px rgba(15, 15, 15, 0.08);
+    margin-bottom: 24px;
+}
+
+.hero .title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.hero .subtitle {
+    font-size: 16px;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+}
+
+.hero .cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.hero .btn {
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(13, 110, 253, 0.12);
+}
+
+.hero .btn-primary {
+    background: linear-gradient(90deg, #0d6efd, #0069ff);
+    color: #fff;
+    border: none;
+}
+
+.hero .btn-ghost {
+    background: transparent;
+    border: 2px solid rgba(43, 43, 43, 0.08);
+    color: #222;
+}
+
+.hero .plate {
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 40% 30%, #fff 0%, #ffeedd 30%, #ffd3a8 100%);
+    box-shadow: 0 8px 24px rgba(20, 20, 20, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.hero .plate .emoji {
+    font-size: 42px;
+}
+
+
+/* -------------------------
+   🧱 Cards
+-------------------------- */
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+
+/* -------------------------
+   📱 Responsive
+-------------------------- */
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 48px 14px;
+    }
+    .hero .title {
+        font-size: 26px;
+    }
+    .hero .subtitle {
+        font-size: 14px;
+    }
+    .hero .plate {
+        width: 90px;
+        height: 90px;
+    }
+}
